@@ -1,0 +1,17 @@
+tags:
+  - auth
+summary: login
+parameters:
+  - name: payload
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+responses:
+  200:
+    description: OK

@@ -1,0 +1,13 @@
+tags:
+  - upload
+consumes:
+  - multipart/form-data
+summary: upload file
+parameters:
+  - in: formData
+    name: file
+    type: file
+    required: true
+responses:
+  200:
+    description: OK

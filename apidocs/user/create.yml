@@ -1,0 +1,28 @@
+tags:
+  - user
+security:
+  - Bearer: []
+summary: create user
+parameters:
+  - name: payload
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        email:
+          type: string
+          example: "test1111@yopmail.com"
+        name:
+          type: string
+          example: 'A'
+        password:
+          type: string
+        password_confirm:
+          type: string
+        role:
+          type: string
+          enum: ['admin', 'secretary']
+responses:
+  200:
+    description: OK

@@ -1,0 +1,11 @@
+tags:
+  - upload
+summary: get file
+parameters:
+  - in: path
+    name: filename
+    type: string
+    required: true
+responses:
+  200:
+    description: OK

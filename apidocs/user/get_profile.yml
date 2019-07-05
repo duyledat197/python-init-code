@@ -1,0 +1,13 @@
+tags:
+  - user
+security:
+  - Bearer: []
+summary: get profiles user
+parameters:
+  - in: path
+    name: user_id
+    type: string
+    required: true
+responses:
+  200:
+    description: OK

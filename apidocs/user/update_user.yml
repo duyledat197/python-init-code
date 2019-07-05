@@ -1,0 +1,21 @@
+tags:
+  - user
+security:
+  - Bearer: []
+summary: update user
+parameters:
+  - in: path
+    name: user_id
+    type: string
+    required: true
+  - name: payload
+    in: body
+    required: true
+    schema:
+      type: object
+      properties:
+        name:
+          type: string
+responses:
+  200:
+    description: OK

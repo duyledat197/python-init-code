@@ -1,0 +1,8 @@
+tags:
+  - auth
+security:
+  - Bearer: []
+summary: token refresh
+responses:
+  200:
+    description: OK

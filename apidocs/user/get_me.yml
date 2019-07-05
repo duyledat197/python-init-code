@@ -1,0 +1,8 @@
+tags:
+  - user
+security:
+  - Bearer: []
+summary: get profiles me
+responses:
+  200:
+    description: OK

@@ -1,0 +1,5 @@
+[TYPECHECK]
+ignored-modules=flask_sqlalchemy
+
+[MESSAGES CONTROL]
+disable=C0103,C0111,C0326,C0301,C0413,C0411,W0401,W0614,E1101

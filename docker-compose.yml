@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  database:
+    image: postgres:11.1
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: rockship
+      POSTGRES_USER: rockship
+      POSTGRES_DB: scriptor
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    command: scripts/wait-for.sh database:5432 -t 10 -- make run-server
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+
+  redis:
+    image: redis:4.0.9
+    ports:
+      - "6379:6379"
+    volumes:
+      - "/tmp/data/redis:/data"
+
+  celery:
+    build: .
+    command: make run-celery
+    depends_on:
+      - redis
+      - database

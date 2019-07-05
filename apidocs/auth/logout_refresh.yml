@@ -1,0 +1,8 @@
+tags:
+  - auth
+security:
+  - Bearer: []
+summary: logout refresh
+responses:
+  200:
+    description: OK

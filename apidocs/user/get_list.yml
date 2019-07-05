@@ -1,0 +1,25 @@
+tags:
+  - user
+security:
+  - Bearer: []
+summary: get list user
+parameters:
+  - in: query
+    name: sort_by
+    type: string
+    enum: ['name']
+  - in: query
+    name: sort_type
+    type: string
+    enum: ['DESC', 'ASC']
+  - in: query
+    name: offset
+    type: integer
+    default: 0
+  - in: query
+    name: limit
+    type: integer
+    default: 10
+responses:
+  200:
+    description: OK
