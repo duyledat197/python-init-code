@@ -23,7 +23,7 @@ Jinja2==2.10
 jmespath==0.9.4
 jsonschema==3.0.1
 kombu==4.5.0
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.1.1
 mistune==0.8.4
 psycopg2==2.7.7
